@@ -349,6 +349,20 @@
     margin-bottom: 18px;
   }
   .panel h4::after { content: ""; flex: 1; height: 1px; background: var(--kin-light); }
+  .note {
+    margin: -20px 0 64px;
+    background: #fbf1ec;
+    border: 1px solid #e8cabd;
+    border-radius: 4px;
+    padding: 20px 26px;
+    font-family: var(--sans);
+    font-size: 0.86rem;
+    color: #4d473f;
+  }
+  .note h4 { color: var(--shu); font-family: var(--serif); font-size: 1rem; letter-spacing: 0.12em; margin-bottom: 8px; }
+  .note ul { padding-left: 1.3em; }
+  .note li { margin-bottom: 6px; line-height: 1.9; }
+  .note b { color: var(--ai); }
   .panel.note-p { background: #fbf1ec; border-color: #e8cabd; }
   .panel.note-p h4 { color: var(--shu); }
   .panel ul.notes { list-style: none; font-family: var(--sans); font-size: 0.85rem; }
@@ -458,38 +472,46 @@
       </div>
     </div>
 
+    <div class="plain">
+      <span class="time">10:30</span>
+      <div>
+        <h3>船の駅中禅寺 着</h3>
+        <p>県営駐車場に駐車して乗船券を購入（大人1,400円／小学生700円）。出航までトイレ休憩。</p>
+      </div>
+    </div>
+
     <article class="spot">
       <div class="ph">
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kegon%20Waterfall%20%40%20Chuzenji%20%289821419484%29.jpg?width=1200" alt="華厳の滝" loading="lazy">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Nantai%20and%20Chuzenji%20Lake%20%2851987073552%29.jpg?width=1200" alt="中禅寺湖と男体山" loading="lazy">
         <span class="no">SPOT 01</span>
         <span class="photo-credit">Photo: Wikimedia Commons</span>
       </div>
       <div class="body">
-        <div class="time-row"><span class="time">10:30</span><span class="tag">観光</span></div>
-        <h3>華厳の滝</h3>
-        <div class="yomi">KEGON FALLS</div>
-        <p class="desc">日本三名瀑のひとつ。エレベーターで100m下の観瀑台へ降りれば、高さ97mの大瀑布が目の前に。水煙と轟音は、写真では伝わらない迫力です。所要約40分。</p>
+        <div class="time-row"><span class="time">11:00</span><span class="tag">観光</span></div>
+        <h3>中禅寺湖遊覧船（一周55分）</h3>
+        <div class="yomi">LAKE CHUZENJI CRUISE</div>
+        <p class="desc">11:00発の一周コースに<b>全員8名で乗船</b>。標高1,269m、日本一高い場所にある湖から男体山を仰ぎ、菖蒲ヶ浜・立木観音をめぐって11:55に船の駅へ戻ります。車は乗り場に置いたままでOK。</p>
         <div class="info"><div class="info-in">
-          <b>華厳滝エレベーター</b>　大人570円／小学生340円／未就学児無料・予約不要（先着順）<br>
-          営業 8:00〜17:00（3〜11月）｜<a href="https://www.kegon.jp/" target="_blank">公式サイト</a>
+          一周 大人1,400円／小学生700円・乗船15分前までに乗り場へ<br>
+          ※渋滞で11:00便を逃したら：先に華厳の滝→竜頭ランチへ切替え、<b>13:30便</b>に乗る（日曜は臨時便が出ることも。<a href="https://chuzenjiko-cruise.com/timetable.html" target="_blank">時刻表</a>）
         </div></div>
       </div>
     </article>
 
     <article class="spot alt">
       <div class="ph">
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Nantai%20and%20Chuzenji%20Lake%20%2851987073552%29.jpg?width=1200" alt="中禅寺湖と男体山" loading="lazy">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kegon%20Waterfall%20%40%20Chuzenji%20%289821419484%29.jpg?width=1200" alt="華厳の滝" loading="lazy">
         <span class="no">SPOT 02</span>
         <span class="photo-credit">Photo: Wikimedia Commons</span>
       </div>
       <div class="body">
-        <div class="time-row"><span class="time">11:15</span><span class="tag">観光</span></div>
-        <h3>中禅寺湖遊覧船</h3>
-        <div class="yomi">LAKE CHUZENJI CRUISE</div>
-        <p class="desc">「船の駅中禅寺」から菖蒲ヶ浜まで約30分の湖上クルーズ。標高1,269m、日本一高い場所にある湖から男体山を仰ぎます。下船場はランチのお店のすぐ近く。</p>
+        <div class="time-row"><span class="time">12:00</span><span class="tag">観光</span></div>
+        <h3>華厳の滝</h3>
+        <div class="yomi">KEGON FALLS</div>
+        <p class="desc">船の駅から徒歩約10分。日本三名瀑のひとつ、エレベーターで100m下の観瀑台へ降りれば高さ97mの大瀑布が目の前に。水煙と轟音は、写真では伝わらない迫力です。見学約40分。</p>
         <div class="info"><div class="info-in">
-          <b>区間乗船の段取り</b>　1周（55分）は時間オーバーのため菖蒲ヶ浜までの区間乗船に。運転手2名は乗船せず、車を竜頭の滝駐車場へ回送して合流。<br>
-          ※出航時刻は<a href="https://chuzenjiko-cruise.com/" target="_blank">公式サイト</a>で事前確認を。合わなければ全員車で移動し湖畔散策へ（プランB）。
+          <b>華厳滝エレベーター</b>　大人570円／小学生340円／未就学児無料・予約不要（先着順）<br>
+          営業 8:00〜17:00（3〜11月）｜<a href="https://www.kegon.jp/" target="_blank">公式サイト</a>
         </div></div>
       </div>
     </article>
@@ -501,7 +523,7 @@
         <span class="photo-credit">Photo: Wikimedia Commons</span>
       </div>
       <div class="body">
-        <div class="time-row"><span class="time">11:50</span><span class="tag">昼食</span></div>
+        <div class="time-row"><span class="time">13:05</span><span class="tag">昼食</span></div>
         <h3>竜頭之茶屋</h3>
         <div class="yomi">RYUZU FALLS &amp; TEAHOUSE</div>
         <p class="desc">二筋に分かれて流れ落ちる竜頭の滝を、窓いっぱいに眺めながらのランチ。名物のお雑煮やお団子を、滝の音とともに。食後は観瀑スポットへひと足どうぞ。</p>
@@ -511,7 +533,7 @@
       </div>
     </article>
 
-    <div class="move"><span><span class="mt">12:20 発</span>いろは坂を下って日光市街へ（約40分）</span></div>
+    <div class="move"><span><span class="mt">13:55 発</span>いろは坂を下って日光市街へ（約40分）</span></div>
 
     <article class="spot alt">
       <div class="ph">
@@ -520,10 +542,10 @@
         <span class="photo-credit">Photo: Wikimedia Commons</span>
       </div>
       <div class="body">
-        <div class="time-row"><span class="time">13:00</span><span class="tag">観光</span></div>
+        <div class="time-row"><span class="time">14:35</span><span class="tag">観光</span></div>
         <h3>日光東照宮</h3>
         <div class="yomi">NIKKO TOSHOGU SHRINE</div>
-        <p class="desc">徳川家康公を祀る世界遺産。一日中眺めても飽きないと言われる陽明門、眠り猫、三猿は必見。杉並木の表参道をゆっくり歩いて参拝します。見学約80分。</p>
+        <p class="desc">徳川家康公を祀る世界遺産。一日中眺めても飽きないと言われる陽明門、眠り猫、三猿は必見。杉並木の表参道をゆっくり歩いて参拝します。見学約70分。</p>
         <div class="info"><div class="info-in">
           拝観料は当日券売場で購入（大人1,600円前後 ※公式サイト要確認）｜<a href="https://www.toshogu.jp/" target="_blank">公式サイト</a><br>
           境内は石段が多め。ご両親のペースに合わせてゆっくりと。
@@ -531,7 +553,7 @@
       </div>
     </article>
 
-    <div class="move"><span><span class="mt">14:20 発</span>鬼怒川温泉へ（約40分）</span></div>
+    <div class="move"><span><span class="mt">15:50 発</span>鬼怒川温泉へ（約40分）</span></div>
 
     <article class="spot">
       <div class="ph">
@@ -540,15 +562,23 @@
         <span class="photo-credit">Photo: Wikimedia Commons</span>
       </div>
       <div class="body">
-        <div class="time-row"><span class="time">15:00</span><span class="tag">宿</span></div>
+        <div class="time-row"><span class="time">16:30</span><span class="tag">宿</span></div>
         <h3>旅館 若竹の庄</h3>
         <div class="yomi">KINUGAWA ONSEN</div>
         <p class="desc">鬼怒川のほとりに佇む温泉旅館にチェックイン。夕食までは、お部屋でゆっくりおしゃべりタイム。渓流を眺める湯にゆったり浸かって、一日の疲れを流しましょう。</p>
         <div class="info"><div class="info-in">
-          チェックイン 15:00｜夕食の時間・部屋割りは当日フロントで確認
+          チェックイン16:30予定（基本15:00のため、<b>夕食時間を事前に宿へ連絡しておくと安心</b>　0288-76-3000）
         </div></div>
       </div>
     </article>
+
+    <div class="note">
+      <h4>🔄 プランB（雨天・渋滞で遊覧船をやめる場合）</h4>
+      <ul>
+        <li><b>10:30〜11:20</b> 華厳の滝（50分ゆっくり）→ <b>11:35</b> 竜頭之茶屋ランチ＋滝見学（60分）→ <b>12:40</b> いろは坂下り → <b>13:20〜14:35</b> 日光東照宮（75分）→ <b>15:20頃</b> 若竹の庄チェックイン</li>
+        <li>雨やいろは坂渋滞で11:00便が微妙なときは、無理せず当日朝にこちらへ切替え。チェックインもほぼ定刻に。</li>
+      </ul>
+    </div>
   </section>
 
   <!-- ===================== 2日目 ===================== -->
@@ -610,7 +640,7 @@
         <h4>旅のご案内</h4>
         <ul class="notes">
           <li><b>奥日光は市街地より5℃ほど涼しい</b>です。6月でも羽織りものを1枚お忘れなく。</li>
-          <li>6月は梅雨の時期。<b>雨天時</b>は遊覧船をやめて東照宮の見学時間を長めに（境内は傘でOK）。折りたたみ傘必携。</li>
+          <li>6月は梅雨の時期。<b>雨天時はプランB</b>（遊覧船なし・1日目参照）に切替え。東照宮の境内は傘でOK。折りたたみ傘必携。</li>
           <li>日曜のいろは坂・東照宮周辺は混雑することがあります。時間は目安に、無理のないペースで。</li>
           <li>遊覧船の時刻・東照宮の拝観料は変更の可能性があるため、<b>出発前に公式サイトで最終確認</b>を。</li>
         </ul>
