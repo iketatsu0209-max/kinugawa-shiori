@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鬼怒川旅行｜親孝行旅行のしおり</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ai: #1f3a5c;          /* 藍 */
+    --ai-deep: #16293f;
+    --shu: #b8402f;         /* 朱 */
+    --kin: #b08d57;         /* 金茶 */
+    --kin-light: #d8c39a;
+    --washi: #f7f3ea;       /* 和紙 */
+    --sumi: #2e2a25;        /* 墨 */
+    --usuzumi: #847c6f;
+    --line: #e0d8c6;
+    --serif: "Shippori Mincho B1", serif;
+    --sans: "Zen Kaku Gothic New", sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--serif);
+    background: var(--washi);
+    color: var(--sumi);
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; width: 100%; }
+
+  /* ===================== 表紙 ===================== */
+  .hero {
+    position: relative;
+    min-height: 94vh;
+    display: flex;
+    align-items: flex-end;
+    color: #fff;
+    background:
+      linear-gradient(180deg, rgba(22,41,63,0.25) 0%, rgba(22,41,63,0.05) 35%, rgba(22,41,63,0.78) 100%),
+      url("https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20nantai%20and%20lake%20chuzenji.jpg?width=1800") center 35% / cover no-repeat;
+  }
+  .hero-inner {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 28px 58px;
+    position: relative;
+  }
+  .hero .kicker {
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 8vh;
+    right: 34px;
+    font-size: clamp(0.95rem, 2.4vw, 1.2rem);
+    letter-spacing: 0.5em;
+    color: #fff;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.45);
+    border-right: 1px solid rgba(255,255,255,0.55);
+    padding-right: 14px;
+    font-weight: 500;
+  }
+  .hero .date-chip {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.32em;
+    border: 1px solid rgba(255,255,255,0.65);
+    border-radius: 999px;
+    padding: 5px 22px 5px 26px;
+    margin-bottom: 22px;
+    backdrop-filter: blur(2px);
+    background: rgba(22,41,63,0.25);
+  }
+  .hero h1 {
+    font-size: clamp(2.3rem, 7vw, 4.2rem);
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    line-height: 1.35;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.4);
+  }
+  .hero .sub {
+    margin-top: 10px;
+    font-size: clamp(0.95rem, 2.6vw, 1.2rem);
+    letter-spacing: 0.42em;
+    color: var(--kin-light);
+    font-weight: 500;
+  }
+  .hero .lede {
+    margin-top: 22px;
+    font-family: var(--sans);
+    font-size: 0.92rem;
+    letter-spacing: 0.08em;
+    max-width: 34em;
+    color: rgba(255,255,255,0.92);
+  }
+  .hero .photo-credit { position: absolute; right: 16px; bottom: 10px; }
+
+  .photo-credit {
+    font-family: var(--sans);
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.75);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  }
+
+  /* ===== メンバー帯 ===== */
+  .members-band {
+    background: var(--ai-deep);
+    color: #fff;
+  }
+  .members-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 26px 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px 46px;
+    font-family: var(--sans);
+  }
+  .members-inner .label {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    letter-spacing: 0.3em;
+    color: var(--kin-light);
+    border-right: 1px solid rgba(255,255,255,0.25);
+    padding-right: 38px;
+  }
+  .members-inner .m {
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+  }
+  .members-inner .m b { font-size: 1.25rem; color: var(--kin-light); font-family: var(--serif); margin: 0 2px; }
+  .members-inner .total {
+    margin-left: auto;
+    font-family: var(--serif);
+    letter-spacing: 0.2em;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 28px; }
+
+  /* ===================== 日別ヘッダー ===================== */
+  .day-head {
+    margin: 84px 0 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 22px;
+    border-bottom: 1px solid var(--kin);
+    padding-bottom: 16px;
+    position: relative;
+  }
+  .day-head .num {
+    font-family: var(--serif);
+    font-size: 4.4rem;
+    line-height: 1;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--kin);
+    letter-spacing: 0;
+  }
+  .day-head .t h2 {
+    font-size: clamp(1.3rem, 3.6vw, 1.7rem);
+    letter-spacing: 0.18em;
+    color: var(--ai);
+    font-weight: 700;
+  }
+  .day-head .t .d {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    letter-spacing: 0.22em;
+    color: var(--usuzumi);
+    margin-top: 2px;
+  }
+  .day-head .seal {
+    margin-left: auto;
+    align-self: center;
+    width: 54px; height: 54px;
+    border-radius: 50%;
+    background: var(--shu);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 1.3;
+    text-align: center;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(184,64,47,0.35);
+  }
+  .theme {
+    font-size: 0.95rem;
+    color: var(--usuzumi);
+    letter-spacing: 0.12em;
+    margin-bottom: 46px;
+  }
+
+  /* ===================== スポットカード ===================== */
+  .spot {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 0;
+    margin: 0 0 64px;
+    background: #fff;
+    border: 1px solid var(--line);
+    box-shadow: 0 18px 44px -26px rgba(46,42,37,0.35);
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .spot.show { opacity: 1; transform: none; }
+  .spot.alt { grid-template-columns: 1fr 1.05fr; }
+  .spot .ph {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+  }
+  .spot.alt .ph { order: 2; }
+  .spot .ph img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s ease;
+  }
+  .spot:hover .ph img { transform: scale(1.045); }
+  .spot .ph .photo-credit { position: absolute; right: 10px; bottom: 8px; }
+  .spot .ph .no {
+    position: absolute;
+    top: 14px; left: 16px;
+    font-family: var(--serif);
+    font-size: 0.78rem;
+    letter-spacing: 0.25em;
+    color: #fff;
+    background: rgba(22,41,63,0.78);
+    padding: 4px 14px;
+  }
+  .spot .body { padding: 34px 36px 30px; display: flex; flex-direction: column; }
+  .spot .time-row {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+  .spot .time {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--shu);
+    letter-spacing: 0.04em;
+  }
+  .spot .tag {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--kin);
+    border: 1px solid var(--kin);
+    padding: 2px 12px;
+    border-radius: 999px;
+  }
+  .spot h3 {
+    font-size: clamp(1.25rem, 3vw, 1.55rem);
+    letter-spacing: 0.1em;
+    color: var(--ai);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .spot .yomi {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.4em;
+    color: var(--usuzumi);
+    margin-bottom: 14px;
+  }
+  .spot .desc { font-size: 0.95rem; color: #4d473f; }
+  .spot .info {
+    margin-top: auto;
+    padding-top: 16px;
+  }
+  .spot .info-in {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    color: #5a544c;
+    background: var(--washi);
+    border-left: 3px solid var(--kin);
+    padding: 12px 16px;
+    line-height: 1.8;
+  }
+  .spot .info-in b { color: var(--ai); }
+  .spot .info-in a { color: var(--ai); }
+
+  /* 移動コネクタ */
+  .move {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: -34px 0 64px;
+    padding: 0 8px;
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    color: var(--usuzumi);
+  }
+  .move::before { content: ""; width: 46px; height: 1px; background: var(--kin); flex: none; }
+  .move .mt { font-weight: 700; color: var(--ai); margin-right: 4px; }
+
+  /* シンプル行（写真なし行程） */
+  .plain {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--ai);
+    padding: 18px 26px;
+    margin-bottom: 64px;
+  }
+  .plain .time { font-family: var(--sans); font-weight: 700; font-size: 1.2rem; color: var(--shu); flex: none; }
+  .plain h3 { font-size: 1.1rem; color: var(--ai); letter-spacing: 0.08em; }
+  .plain p { font-size: 0.88rem; color: #5a544c; }
+
+  /* ===================== 注意・宿・持ち物 ===================== */
+  .panel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    margin: 80px 0 0;
+  }
+  .panel {
+    background: #fff;
+    border: 1px solid var(--line);
+    padding: 30px 32px;
+  }
+  .panel.wide { grid-column: 1 / -1; }
+  .panel h4 {
+    font-size: 1.05rem;
+    letter-spacing: 0.26em;
+    color: var(--ai);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .panel h4::after { content: ""; flex: 1; height: 1px; background: var(--kin-light); }
+  .panel.note-p { background: #fbf1ec; border-color: #e8cabd; }
+  .panel.note-p h4 { color: var(--shu); }
+  .panel ul.notes { list-style: none; font-family: var(--sans); font-size: 0.85rem; }
+  .panel ul.notes li {
+    padding-left: 1.4em;
+    position: relative;
+    margin-bottom: 10px;
+    color: #4d473f;
+  }
+  .panel ul.notes li::before { content: "※"; position: absolute; left: 0; color: var(--shu); }
+  .panel table { width: 100%; border-collapse: collapse; font-family: var(--sans); font-size: 0.86rem; }
+  .panel td { padding: 8px 4px; border-bottom: 1px dashed var(--line); vertical-align: top; }
+  .panel td:first-child { width: 8.5em; color: var(--usuzumi); white-space: nowrap; letter-spacing: 0.1em; }
+  .checklist { list-style: none; columns: 2; font-family: var(--sans); font-size: 0.86rem; column-gap: 36px; }
+  .checklist li { margin-bottom: 9px; break-inside: avoid; color: #4d473f; }
+  .checklist li::before { content: "☐"; color: var(--shu); margin-right: 9px; }
+
+  /* ===================== フッター ===================== */
+  .footer {
+    margin-top: 90px;
+    background: var(--ai-deep);
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    padding: 54px 28px 40px;
+  }
+  .footer .mark { font-size: 1.9rem; color: var(--kin-light); }
+  .footer .msg {
+    font-size: 1.02rem;
+    letter-spacing: 0.34em;
+    margin: 12px 0 26px;
+  }
+  .footer .credits {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.5);
+    line-height: 2;
+  }
+
+  /* ===================== レスポンシブ ===================== */
+  @media (max-width: 720px) {
+    .hero { min-height: 78vh; }
+    .hero .kicker { top: 6vh; right: 20px; font-size: 0.85rem; }
+    .members-inner { gap: 10px 26px; padding: 22px 24px; }
+    .members-inner .label { border: none; padding: 0; width: 100%; }
+    .members-inner .total { margin-left: 0; width: 100%; }
+    .spot, .spot.alt { grid-template-columns: 1fr; }
+    .spot.alt .ph { order: 0; }
+    .spot .ph { min-height: 220px; }
+    .spot .body { padding: 26px 24px 24px; }
+    .panel-grid { grid-template-columns: 1fr; }
+    .checklist { columns: 1; }
+    .day-head .num { font-size: 3.2rem; }
+  }
+  @media print {
+    .hero { min-height: 60vh; }
+    .spot { box-shadow: none; page-break-inside: avoid; opacity: 1; transform: none; }
+    .hero, .members-band, .day-head .seal, .footer {
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== 表紙 ===================== -->
+<header class="hero">
+  <span class="kicker">感謝を込めて、湯けむりの旅へ</span>
+  <div class="hero-inner">
+    <div class="date-chip">2026.6.21 SUN — 6.22 MON｜一泊二日</div>
+    <h1>鬼怒川旅行</h1>
+    <div class="sub">親孝行旅行のしおり ― 奥日光・鬼怒川温泉の旅</div>
+    <p class="lede">中禅寺湖の絶景、世界遺産・日光東照宮、そして鬼怒川の名湯。家族そろって、ゆったりめぐる二日間。</p>
+  </div>
+  <span class="photo-credit">中禅寺湖と男体山｜Photo: Wikimedia Commons</span>
+</header>
+
+<div class="members-band">
+  <div class="members-inner">
+    <span class="label">旅のメンバー</span>
+    <span class="m">ご両親 <b>2</b>名</span>
+    <span class="m">池田家 <b>4</b>名</span>
+    <span class="m">姉家族 <b>2</b>名</span>
+    <span class="total">— 総勢八名の旅 —</span>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- ===================== 1日目 ===================== -->
+  <section>
+    <div class="day-head">
+      <span class="num">01</span>
+      <div class="t">
+        <h2>奥日光・世界遺産めぐり</h2>
+        <div class="d">6月21日（日）｜晴れたら男体山がお出迎え</div>
+      </div>
+      <span class="seal">一日目</span>
+    </div>
+    <p class="theme">中禅寺湖の絶景と日光東照宮をめぐり、夕方には鬼怒川の湯へ。</p>
+
+    <div class="plain">
+      <span class="time">8:30</span>
+      <div>
+        <h3>池田家 出発</h3>
+        <p>車に分乗して出発。日光宇都宮道路・清滝ICからいろは坂を上ります。</p>
+      </div>
+    </div>
+
+    <article class="spot">
+      <div class="ph">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kegon%20Waterfall%20%40%20Chuzenji%20%289821419484%29.jpg?width=1200" alt="華厳の滝" loading="lazy">
+        <span class="no">SPOT 01</span>
+        <span class="photo-credit">Photo: Wikimedia Commons</span>
+      </div>
+      <div class="body">
+        <div class="time-row"><span class="time">10:30</span><span class="tag">観光</span></div>
+        <h3>華厳の滝</h3>
+        <div class="yomi">KEGON FALLS</div>
+        <p class="desc">日本三名瀑のひとつ。エレベーターで100m下の観瀑台へ降りれば、高さ97mの大瀑布が目の前に。水煙と轟音は、写真では伝わらない迫力です。所要約40分。</p>
+        <div class="info"><div class="info-in">
+          <b>華厳滝エレベーター</b>　大人570円／小学生340円／未就学児無料・予約不要（先着順）<br>
+          営業 8:00〜17:00（3〜11月）｜<a href="https://www.kegon.jp/" target="_blank">公式サイト</a>
+        </div></div>
+      </div>
+    </article>
+
+    <article class="spot alt">
+      <div class="ph">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Nantai%20and%20Chuzenji%20Lake%20%2851987073552%29.jpg?width=1200" alt="中禅寺湖と男体山" loading="lazy">
+        <span class="no">SPOT 02</span>
+        <span class="photo-credit">Photo: Wikimedia Commons</span>
+      </div>
+      <div class="body">
+        <div class="time-row"><span class="time">11:15</span><span class="tag">観光</span></div>
+        <h3>中禅寺湖遊覧船</h3>
+        <div class="yomi">LAKE CHUZENJI CRUISE</div>
+        <p class="desc">「船の駅中禅寺」から菖蒲ヶ浜まで約30分の湖上クルーズ。標高1,269m、日本一高い場所にある湖から男体山を仰ぎます。下船場はランチのお店のすぐ近く。</p>
+        <div class="info"><div class="info-in">
+          <b>区間乗船の段取り</b>　1周（55分）は時間オーバーのため菖蒲ヶ浜までの区間乗船に。運転手2名は乗船せず、車を竜頭の滝駐車場へ回送して合流。<br>
+          ※出航時刻は<a href="https://chuzenjiko-cruise.com/" target="_blank">公式サイト</a>で事前確認を。合わなければ全員車で移動し湖畔散策へ（プランB）。
+        </div></div>
+      </div>
+    </article>
+
+    <article class="spot">
+      <div class="ph">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/200731%20Ryuzu%20Falls%20Nikko%20Japan01s3.jpg?width=1200" alt="竜頭の滝" loading="lazy">
+        <span class="no">SPOT 03</span>
+        <span class="photo-credit">Photo: Wikimedia Commons</span>
+      </div>
+      <div class="body">
+        <div class="time-row"><span class="time">11:50</span><span class="tag">昼食</span></div>
+        <h3>竜頭之茶屋</h3>
+        <div class="yomi">RYUZU FALLS &amp; TEAHOUSE</div>
+        <p class="desc">二筋に分かれて流れ落ちる竜頭の滝を、窓いっぱいに眺めながらのランチ。名物のお雑煮やお団子を、滝の音とともに。食後は観瀑スポットへひと足どうぞ。</p>
+        <div class="info"><div class="info-in">
+          <a href="https://tabelog.com/tochigi/A0903/A090301/9002349/dtlmap/" target="_blank">食べログ（地図）</a>｜店の目の前が観瀑台。移動ロスゼロのお昼です。
+        </div></div>
+      </div>
+    </article>
+
+    <div class="move"><span><span class="mt">12:20 発</span>いろは坂を下って日光市街へ（約40分）</span></div>
+
+    <article class="spot alt">
+      <div class="ph">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nikko%20Toshogu%20Yomeimon%20Gate%202024.jpg?width=1200" alt="日光東照宮 陽明門" loading="lazy">
+        <span class="no">SPOT 04</span>
+        <span class="photo-credit">Photo: Wikimedia Commons</span>
+      </div>
+      <div class="body">
+        <div class="time-row"><span class="time">13:00</span><span class="tag">観光</span></div>
+        <h3>日光東照宮</h3>
+        <div class="yomi">NIKKO TOSHOGU SHRINE</div>
+        <p class="desc">徳川家康公を祀る世界遺産。一日中眺めても飽きないと言われる陽明門、眠り猫、三猿は必見。杉並木の表参道をゆっくり歩いて参拝します。見学約80分。</p>
+        <div class="info"><div class="info-in">
+          拝観料は当日券売場で購入（大人1,600円前後 ※公式サイト要確認）｜<a href="https://www.toshogu.jp/" target="_blank">公式サイト</a><br>
+          境内は石段が多め。ご両親のペースに合わせてゆっくりと。
+        </div></div>
+      </div>
+    </article>
+
+    <div class="move"><span><span class="mt">14:20 発</span>鬼怒川温泉へ（約40分）</span></div>
+
+    <article class="spot">
+      <div class="ph">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kinugawa%20Onsen%2C%20Nikko%20-%20Nov%205%2C%202016%20%283%29.jpg?width=1200" alt="鬼怒川温泉" loading="lazy">
+        <span class="no">STAY</span>
+        <span class="photo-credit">Photo: Wikimedia Commons</span>
+      </div>
+      <div class="body">
+        <div class="time-row"><span class="time">15:00</span><span class="tag">宿</span></div>
+        <h3>旅館 若竹の庄</h3>
+        <div class="yomi">KINUGAWA ONSEN</div>
+        <p class="desc">鬼怒川のほとりに佇む温泉旅館にチェックイン。夕食までは、お部屋でゆっくりおしゃべりタイム。渓流を眺める湯にゆったり浸かって、一日の疲れを流しましょう。</p>
+        <div class="info"><div class="info-in">
+          チェックイン 15:00｜夕食の時間・部屋割りは当日フロントで確認
+        </div></div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ===================== 2日目 ===================== -->
+  <section>
+    <div class="day-head">
+      <span class="num">02</span>
+      <div class="t">
+        <h2>鬼怒川渓谷さんぽ</h2>
+        <div class="d">6月22日（月）｜朝湯を楽しんでから、軽やかに</div>
+      </div>
+      <span class="seal">二日目</span>
+    </div>
+    <p class="theme">朝風呂と朝食をゆっくり楽しんで、帰り道は渓谷美とお土産めぐり。</p>
+
+    <div class="plain">
+      <span class="time">10:00</span>
+      <div>
+        <h3>ホテル出発</h3>
+        <p>朝風呂・朝食ののち、忘れ物チェックをしてチェックアウト。</p>
+      </div>
+    </div>
+
+    <article class="spot">
+      <div class="ph">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nijimibashi%2C%20Ry%C5%AB%C5%8Dky%C5%8D%2001.jpg?width=1200" alt="龍王峡 虹見橋" loading="lazy">
+        <span class="no">SPOT 05</span>
+        <span class="photo-credit">Photo: Wikimedia Commons</span>
+      </div>
+      <div class="body">
+        <div class="time-row"><span class="time">10:10</span><span class="tag">観光</span></div>
+        <h3>龍王峡</h3>
+        <div class="yomi">RYUOKYO GORGE</div>
+        <p class="desc">宿から車で約10分。火山岩を鬼怒川が刻んだ、白い岩肌とエメラルドの流れのコントラストが見事な渓谷。虹見の滝・虹見橋までの往復なら約40〜60分の気軽なコースです。</p>
+        <div class="info"><div class="info-in">
+          散策無料・駐車場あり｜遊歩道は階段の下りがあるので歩きやすい靴で。体力に合わせて虹見橋で折り返し。
+        </div></div>
+      </div>
+    </article>
+
+    <div class="plain">
+      <span class="time">11:30</span>
+      <div>
+        <h3>道の駅 日光（ニコニコ本陣）　<span style="font-size:0.8rem;color:var(--kin);">昼食・土産</span></h3>
+        <p>帰り道の今市エリアでランチ＆お土産タイム。日光ゆば・羊羹・地酒など、ご両親へのお土産選びも。</p>
+      </div>
+    </div>
+
+    <div class="plain">
+      <span class="time">13:00</span>
+      <div>
+        <h3>帰路へ</h3>
+        <p>渋滞前に出発。おつかれさまでした！ 道中の運転は交代しながら、安全第一で。</p>
+      </div>
+    </div>
+
+    <!-- ===================== 案内パネル ===================== -->
+    <div class="panel-grid">
+      <div class="panel note-p wide">
+        <h4>旅のご案内</h4>
+        <ul class="notes">
+          <li><b>奥日光は市街地より5℃ほど涼しい</b>です。6月でも羽織りものを1枚お忘れなく。</li>
+          <li>6月は梅雨の時期。<b>雨天時</b>は遊覧船をやめて東照宮の見学時間を長めに（境内は傘でOK）。折りたたみ傘必携。</li>
+          <li>日曜のいろは坂・東照宮周辺は混雑することがあります。時間は目安に、無理のないペースで。</li>
+          <li>遊覧船の時刻・東照宮の拝観料は変更の可能性があるため、<b>出発前に公式サイトで最終確認</b>を。</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h4>お宿の情報</h4>
+        <table>
+          <tr><td>宿名</td><td>鬼怒川温泉　旅館 若竹の庄</td></tr>
+          <tr><td>チェックイン</td><td>6月21日（日）15:00</td></tr>
+          <tr><td>チェックアウト</td><td>6月22日（月）10:00 出発</td></tr>
+          <tr><td>住所・電話</td><td>（予約確認書を参照して記入）</td></tr>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h4>持ち物リスト</h4>
+        <ul class="checklist">
+          <li>健康保険証（全員分）</li>
+          <li>常備薬・お薬手帳</li>
+          <li>羽織りもの</li>
+          <li>折りたたみ傘・レインウェア</li>
+          <li>歩きやすい靴</li>
+          <li>カメラ・スマホ充電器</li>
+          <li>現金（茶屋・拝観料・お賽銭用）</li>
+          <li>酔い止め（いろは坂対策）</li>
+          <li>飲み物・車内のお菓子</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="mark">♨</div>
+  <div class="msg">すてきな思い出になりますように</div>
+  <div class="credits">
+    池田家 親孝行旅行 2026｜本しおりの写真は Wikimedia Commons のフリーライセンス画像を使用しています<br>
+    掲載の料金・時刻は作成時点の情報です。お出かけ前に各公式サイトをご確認ください
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.spot').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
